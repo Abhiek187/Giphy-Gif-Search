@@ -42,3 +42,11 @@ button {
   	border: 1px solid #FE7880;
   	color: #FE7880;
 }
+
+/* GRID */
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
