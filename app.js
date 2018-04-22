@@ -1,4 +1,3 @@
-// app.js
 var express = require('express');
 var app = express();
 // INITIALIZE THE GIPHY-API LIBRARY
@@ -18,7 +17,6 @@ var exphbs  = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-// index.js
 app.get('/greetings/:name', function (req, res) {
 	var name = req.params.name;
 	res.render('greetings', {name: name});
@@ -32,3 +30,5 @@ app.get('/', function (req, res) {
 		res.render('home', {gifs: response.data});
 	});
 });
+
+app.use(express.static('public'));
