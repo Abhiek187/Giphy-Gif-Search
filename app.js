@@ -26,9 +26,15 @@ app.get('/greetings/:name', function (req, res) {
 var http = require('http');
 
 app.get('/', function (req, res) {
-	giphy.search(req.query.term, function (err, response) {
-		res.render('home', {gifs: response.data});
-	});
+	if (req.query.term == null) {
+		giphy.trending(function (err, response) {
+			res.render('home', {gifs: response.data});
+		});
+	} else {
+		giphy.search(req.query.term, function (err, response) {
+			res.render('home', {gifs: response.data});
+		});
+	}
 });
 
 app.use(express.static('public'));
