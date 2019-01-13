@@ -4,5 +4,6 @@ This program showcases relevant GIFs from Giphy based on the user's search term.
 
 **To Run:**
 
-1. Run server using the command line: `node app.js`
-2. Enter _localhost:3000_ in the address bar to access the site.
+1. Install dependencies using the command line: `npm install`
+2. Run server using the command line: `node app.js`
+3. Enter _localhost:3000_ in the address bar to access the site.
