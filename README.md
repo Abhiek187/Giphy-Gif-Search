@@ -2,6 +2,8 @@
 
 This program showcases relevant GIFs from Giphy based on the user's search term. If nothing is provided, the trending GIFs are posted instead.
 
+![Trending GIFs](recording.gif)
+
 **To Run:**
 
 1. Install dependencies using the command line: `npm install`
