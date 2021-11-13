@@ -28,7 +28,8 @@ app.get("/greetings/:name", function (req, res) {
 const http = require("http");
 
 app.get("/", function (req, res) {
-    if (req.query.term === null || req.query.term === "") {
+    // If the term is null, undefined, NaN, "", 0, or false
+    if (!req.query.term) {
         giphy.trending(function (err, response) {
             res.render("home", { gifs: response.data });
         });
