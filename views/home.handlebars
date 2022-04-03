@@ -1,9 +1,10 @@
 <h1>Search for GIFS</h1>
 <form action="/">
-  <input type="text" name="term">
-  <button type="submit">Search</button>
+    <input type="text" name="term" />
+    <button type="submit">Search</button>
+    <img src="powered-by-giphy.png" alt="Powered by GIPHY" />
 </form>
 
 {{#each gifs}}
-  <img src="{{this.images.fixed_height.url}}">
+<img src="{{this.images.fixed_height.webp}}" alt="{{this.title}}" height="200" />
 {{/each}}
