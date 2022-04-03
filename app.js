@@ -1,7 +1,13 @@
+// Load environment variables
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 // INITIALIZE THE GIPHY-API LIBRARY
-const giphy = require("giphy-api")();
+const giphy = require("giphy-api")({
+    https: true,
+    apiKey: process.env.GIPHY_API_KEY,
+});
 
 app.get("/hello-gif", function (req, res) {
     const gifUrl = "http://media2.giphy.com/media/gYBVM1igrlzH2/giphy.gif";
