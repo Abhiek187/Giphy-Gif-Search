@@ -4,12 +4,28 @@ This program showcases relevant GIFs from [GIPHY](https://developers.giphy.com/d
 
 ![Trending GIFs](recording.gif)
 
-**Directions**
+## Directions
 
-Open [https://glacial-garden-54215.herokuapp.com/](https://glacial-garden-54215.herokuapp.com/), or:
+### Live Demo
+
+Open [https://glacial-garden-54215.herokuapp.com/](https://glacial-garden-54215.herokuapp.com/).
+
+### Running Locally
 
 1. Obtain an API key from [GIPHY](https://developers.giphy.com/).
 2. Create a `.env` file with the line `GIPHY_API_KEY=<YOUR_API_KEY>`.
-3. Install node dependencies: `npm install`
-4. Run the server: `node app.js`
-5. Enter _localhost:3000_ in the address bar to access the site.
+3. Install node dependencies: `npm install`.
+4. Run the server: `node app.js`.
+5. Open _localhost:3000_ in the browser to access the site.
+
+Press Ctrl+C to stop the server when done.
+
+### Docker
+
+1. Obtain an API key from [GIPHY](https://developers.giphy.com/).
+2. Create a `.env` file with the line `GIPHY_API_KEY=<YOUR_API_KEY>`.
+3. Build the docker image: `docker build . -t <your username>/node-web-app`.
+4. Run the image: `docker run -p 8080:8080 -d <your username>/node-web-app`.
+5. Open _localhost:8080_ in the browser to access the site.
+
+Run `docker kill <container id>` to shut down the image when done. The container ID can be found using `docker ps`.
