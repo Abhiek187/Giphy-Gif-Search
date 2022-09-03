@@ -1,5 +1,5 @@
 # Fetch the latest LTS version of node
-FROM node:16
+FROM node:18-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
