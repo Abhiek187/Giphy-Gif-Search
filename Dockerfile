@@ -18,5 +18,5 @@ COPY . .
 
 # Run the node app on port 8080 and open the connection
 ENV PORT=8080
-EXPOSE 8080
+EXPOSE $PORT
 CMD [ "node", "app.js" ]
