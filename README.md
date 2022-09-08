@@ -8,7 +8,7 @@ This program showcases relevant GIFs from [GIPHY](https://developers.giphy.com/d
 
 ### Live Demo
 
-Open [https://glacial-garden-54215.herokuapp.com/](https://glacial-garden-54215.herokuapp.com/).
+Open [https://glacial-garden-54215.onrender.com/](https://glacial-garden-54215.onrender.com/).
 
 ### Running Locally
 
