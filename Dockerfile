@@ -1,5 +1,5 @@
 # Fetch the latest LTS version of node
-FROM node:18-alpine
+FROM node:26-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install
+RUN npm install && npm cache clean --force
 # If you are building your code for production
 # RUN npm ci --only=production
 
